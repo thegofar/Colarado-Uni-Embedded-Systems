@@ -12,33 +12,87 @@
  * @file stats.h 
  * @brief header file to support module 1 of the embedded coursework
  *
- * <Add Extended Description Here>
+ * A detailed header file containing all the basic function defs for working with arrays
  *
- * @author <Add FirsName LastName>
- * @date <Add date >
+ * @author Craig Barry
+ * @date 3/02/18
  *
  */
 #ifndef __STATS_H__
 #define __STATS_H__
 
-/* Add Your Declarations and Function Comments here */ 
-
 /**
  * @brief A function that prints the statistics of an array including minimum, 
  * maximum, mean, and median.
  *
- * @param arr The unsigned array of bytes passed in as a pointer
- * @param n The number of elements in the array
+ * @param arr The unsigned array of bytes passed
+ * @param length The number of elements in the array
  *
  * @return void - this function outputs to the terminal with printf
  */
-    void print_statistics(unsigned char *arr, int n); 
-    print_array() - Given an array of data and a length, prints the array to the screen
-    find_median() - Given an array of data and a length, returns the median value
-    find_mean() - Given an array of data and a length, returns the mean
-    find_maximum() - Given an array of data and a length, returns the maximum
-    find_minimum() - Given an array of data and a length, returns the minimum
-    sort_array() - Given an array of data and a length, sorts the array from largest to smallest. (The zeroth Element should be the largest value, and the last element (n-1) should be the smallest value. )
+    void print_statistics(unsigned char arr[], int length); 
+
+/**
+ * @brief Given an array of data and a length, prints the array to the screen
+ *
+ * @param arr The unsigned array of bytes passed in as a pointer
+ * @param arr_size The number of elements in the array
+ *
+ * @return void - this function outputs to the terminal with printf
+ */
+    void print_array(unsigned char arr[], int length);
+
+/**
+ * @brief Given an array of data and a length, returns the median value
+ *
+ * @param arr The unsigned array of bytes
+ * @param arr_size The number of elements in the array
+ *
+ * @return int - the median
+ */
+    int find_median(unsigned char arr[], int length);
+
+/**
+ * @brief Given an array of data and a length, returns the mean
+ *
+ * @param arr The unsigned array of bytes
+ * @param arr_size The number of elements in the array
+ *
+ * @return void - this function outputs to the terminal with printf
+ */
+    int find_mean(unsigned char arr[], int length);
+
+/**
+ * @brief Given an array of data and a length, returns the maximum
+ *
+ * @param arr The unsigned array of bytes
+ * @param arr_size The number of elements in the array
+ *
+ * @return int - the max
+ */
+    int find_maximum(unsigned char arr[], int length);
+
+/**
+ * @brief Given an array of data and a length, returns the minimum
+ *
+ * @param arr The unsigned array of bytes
+ * @param arr_size The number of elements in the array
+ *
+ * @return int - the min
+ */
+    int find_minimum(unsigned char arr[], int length);
+
+/**
+ * @brief Given an array of data and a length, sorts the array from largest to smallest. 
+ * (The zeroth Element should be the largest value, and the last element (n-1) should be the
+ * smallest value. )
+ *
+ * @param arr The unsigned array of bytes
+ * @param arr_size The number of elements in the array
+ *
+ * @return void - this function returns an int
+ */
+    int sort_array(unsigned char arr[], int length) - 
 
 
 
