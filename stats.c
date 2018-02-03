@@ -35,43 +35,67 @@ void main() {
                               201,   6,  12,  60,   8,   2,   5,  67,
                                 7,  87, 250, 230,  99,   3, 100,  90};
 
-  /* Other Variable Declarations Go Here */
+    /* Other Variable Declarations Go Here */
 
-  /* Statistics and Printing Functions Go Here */
+    /* Statistics and Printing Functions Go Here */
     void print_statistics(unsigned char arr[], int length)
     {
-    
+    	int minimum, maximum, mean, median;
+	
+        minimum = find_minimum(arr, length);
+	maximum = find_maximum(arr,length);
+	mean = find_mean(arr,length);
+	median = find_median(arr,length);
+	
+	printf("Minimum: %d\n", minimum);
+	printf("Maximum: %d\n", maximum);
+	printf("Mean: %d\n", mean);
+	printf("Median: %d\n", median);
+
     }
     
     void print_array(unsigned char arr[], int length)
     {
 
     }
-    int find_median(unsigned char arr[], int length)
-    {
 
-    }
-
-    int find_mean(unsigned char arr[], int length)
-    {
-
-    }
-
-    int find_maximum(unsigned char arr[], int length)
-    {
-
-    }
-
-    int find_minimum(unsigned char arr[], int length)
-    {
-
-    }
-
-    int sort_array(unsigned char arr[], int length)
-    {
-
-    }
-
+    print_statistics(test,SIZE);
+    
 }
 
 /* Add other Implementation File Code Here */
+int find_median(unsigned char arr[], int length)
+{
+
+}
+
+int find_mean(unsigned char arr[], int length)
+{
+
+}
+
+int find_maximum(unsigned char arr[], int length)
+{
+    int tmp=-2147483646;
+    for(int i =0; i<length; i++)
+    {
+        if(arr[i]>tmp){tmp=arr[i];}
+    }
+    return tmp;
+}
+
+int find_minimum(unsigned char arr[], int length)
+{
+    int tmp=2147483646;
+    for(int i =0; i<length; i++)
+    {
+        if(arr[i]<tmp){tmp=arr[i];}
+    }
+    return tmp;
+}
+
+int sort_array(unsigned char arr[], int length)
+{
+
+}
+

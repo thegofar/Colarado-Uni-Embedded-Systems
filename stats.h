@@ -92,7 +92,7 @@
  *
  * @return void - this function returns an int
  */
-    int sort_array(unsigned char arr[], int length) - 
+    int sort_array(unsigned char arr[], int length);
 
 
 
