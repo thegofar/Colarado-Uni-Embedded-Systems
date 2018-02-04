@@ -35,14 +35,12 @@ void main() {
                               201,   6,  12,  60,   8,   2,   5,  67,
                                 7,  87, 250, 230,  99,   3, 100,  90};
 
-    /* Other Variable Declarations Go Here */
 
-    /* Statistics and Printing Functions Go Here */
-    void print_statistics(unsigned char arr[], int length)
-    {
-    	int minimum, maximum, mean, median;
-	
-        minimum = find_minimum(arr, length);
+  int minimum, maximum, mean, median;
+
+  void print_statistics(unsigned char arr[], int length)
+  {
+    minimum = find_minimum(arr, length);
 	maximum = find_maximum(arr,length);
 	mean = find_mean(arr,length);
 	median = find_median(arr,length);
@@ -51,51 +49,74 @@ void main() {
 	printf("Maximum: %d\n", maximum);
 	printf("Mean: %d\n", mean);
 	printf("Median: %d\n", median);
-
-    }
+  }
     
-    void print_array(unsigned char arr[], int length)
+  void print_array(unsigned char arr[], int length)
+  {
+    for(int i=0;i<length;i++)
     {
+	  printf("%d\n" ,arr[i]);
+	}
+  }
 
-    }
-
-    print_statistics(test,SIZE);
-    
+  printf("Printing the unsorted array:\n");
+  print_array(test,SIZE);
+  printf("\nPrinting the sorted array:\n");
+  sort_array(test,SIZE);
+  print_array(test,SIZE);
+  printf("\nHere are some stats:\n");
+  print_statistics(test,SIZE);
 }
 
-/* Add other Implementation File Code Here */
-int find_median(unsigned char arr[], int length)
-{
+  int find_median(unsigned char arr[], int length)
+  {
+    return arr[(length+1)/2];
+  }
 
-}
+  int find_mean(unsigned char arr[], int length)
+  {
+    int sum=0;
+    for(int i=0;i<length;i++)
+    {
+	  sum+=arr[i];
+	}
+	return sum/length;
+  }
 
-int find_mean(unsigned char arr[], int length)
-{
-
-}
-
-int find_maximum(unsigned char arr[], int length)
-{
-    int tmp=-2147483646;
+  int find_maximum(unsigned char arr[], int length)
+  {
+    unsigned char tmp=0;
     for(int i =0; i<length; i++)
     {
         if(arr[i]>tmp){tmp=arr[i];}
     }
-    return tmp;
-}
+    return (int)tmp;
+  }
 
-int find_minimum(unsigned char arr[], int length)
-{
-    int tmp=2147483646;
+  int find_minimum(unsigned char arr[], int length)
+  {
+    unsigned char tmp=255;
     for(int i =0; i<length; i++)
     {
         if(arr[i]<tmp){tmp=arr[i];}
     }
-    return tmp;
-}
+    return (int)tmp;
+  }
 
-int sort_array(unsigned char arr[], int length)
-{
-
-}
+  void sort_array(unsigned char arr[], int length)
+  { 
+	unsigned char tmp;
+	unsigned char *a, *b;
+    for(int i=0;i<length-1;i++){
+	  for(int j=0;j<length-1; j++){
+		if(arr[j]<arr[j+1]){
+	      tmp=arr[j]; //store the smaller value in tmp
+		  b=&arr[j+1]; //store larger value address in b
+		  a=&arr[j]; // store smaller value address in a
+		  *a=*b; // swap b's value into a's value
+		  *b=tmp; // assign b's value from a's before we overwrote it!
+	    }
+      }
+	}
+  }
 

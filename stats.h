@@ -40,7 +40,7 @@
  *
  * @return void - this function outputs to the terminal with printf
  */
-    void print_array(unsigned char arr[], int length);
+void print_array(unsigned char arr[], int length);
 
 /**
  * @brief Given an array of data and a length, returns the median value
@@ -50,7 +50,7 @@
  *
  * @return int - the median
  */
-    int find_median(unsigned char arr[], int length);
+int find_median(unsigned char arr[], int length);
 
 /**
  * @brief Given an array of data and a length, returns the mean
@@ -60,7 +60,7 @@
  *
  * @return void - this function outputs to the terminal with printf
  */
-    int find_mean(unsigned char arr[], int length);
+int find_mean(unsigned char arr[], int length);
 
 /**
  * @brief Given an array of data and a length, returns the maximum
@@ -70,7 +70,7 @@
  *
  * @return int - the max
  */
-    int find_maximum(unsigned char arr[], int length);
+int find_maximum(unsigned char arr[], int length);
 
 /**
  * @brief Given an array of data and a length, returns the minimum
@@ -80,7 +80,7 @@
  *
  * @return int - the min
  */
-    int find_minimum(unsigned char arr[], int length);
+int find_minimum(unsigned char arr[], int length);
 
 /**
  * @brief Given an array of data and a length, sorts the array from largest to smallest. 
@@ -92,7 +92,7 @@
  *
  * @return void - this function returns an int
  */
-    int sort_array(unsigned char arr[], int length);
+void sort_array(unsigned char arr[], int length);
 
 
 
