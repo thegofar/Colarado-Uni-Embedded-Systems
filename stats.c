@@ -9,17 +9,15 @@
  *
  *****************************************************************************/
 /**
- * @file <Add File Name> 
- * @brief <Add Brief Description Here >
+ * @file stats.c
+ * @brief contains the main entry point to test my simple C functions
  *
- * <Add Extended Description Here>
+ * Various functions to sort through an array
  *
- * @author <Add FirsName LastName>
- * @date <Add date >
+ * @author Craig Barry
+ * @date 4th Feb 2018
  *
  */
-
-
 
 #include <stdio.h>
 #include "stats.h"
@@ -34,7 +32,6 @@ void main() {
                               200, 122, 150, 90,   92,  87, 177, 244,
                               201,   6,  12,  60,   8,   2,   5,  67,
                                 7,  87, 250, 230,  99,   3, 100,  90};
-
 
   int minimum, maximum, mean, median;
 
@@ -68,12 +65,12 @@ void main() {
   print_statistics(test,SIZE);
 }
 
-  int find_median(unsigned char arr[], int length)
+  unsigned char find_median(unsigned char arr[], int length)
   {
     return arr[(length+1)/2];
   }
 
-  int find_mean(unsigned char arr[], int length)
+  unsigned char find_mean(unsigned char arr[], int length)
   {
     int sum=0;
     for(int i=0;i<length;i++)
@@ -83,24 +80,24 @@ void main() {
 	return sum/length;
   }
 
-  int find_maximum(unsigned char arr[], int length)
+  unsigned char find_maximum(unsigned char arr[], int length)
   {
     unsigned char tmp=0;
     for(int i =0; i<length; i++)
     {
         if(arr[i]>tmp){tmp=arr[i];}
     }
-    return (int)tmp;
+    return tmp;
   }
 
-  int find_minimum(unsigned char arr[], int length)
+  unsigned char find_minimum(unsigned char arr[], int length)
   {
     unsigned char tmp=255;
     for(int i =0; i<length; i++)
     {
         if(arr[i]<tmp){tmp=arr[i];}
     }
-    return (int)tmp;
+    return tmp;
   }
 
   void sort_array(unsigned char arr[], int length)

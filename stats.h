@@ -25,17 +25,17 @@
  * @brief A function that prints the statistics of an array including minimum, 
  * maximum, mean, and median.
  *
- * @param arr The unsigned array of bytes passed
+ * @param arr[] The unsigned array of bytes passed
  * @param length The number of elements in the array
  *
  * @return void - this function outputs to the terminal with printf
  */
-    void print_statistics(unsigned char arr[], int length); 
+void print_statistics(unsigned char arr[], int length); 
 
 /**
  * @brief Given an array of data and a length, prints the array to the screen
  *
- * @param arr The unsigned array of bytes passed in as a pointer
+ * @param arr[] The unsigned array of bytes passed in as a pointer
  * @param arr_size The number of elements in the array
  *
  * @return void - this function outputs to the terminal with printf
@@ -45,32 +45,32 @@ void print_array(unsigned char arr[], int length);
 /**
  * @brief Given an array of data and a length, returns the median value
  *
- * @param arr The unsigned array of bytes
+ * @param arr[] The unsigned array of bytes
  * @param arr_size The number of elements in the array
  *
- * @return int - the median
+ * @return the median - middle of the dataset
  */
-int find_median(unsigned char arr[], int length);
+unsigned char find_median(unsigned char arr[], int length);
 
 /**
  * @brief Given an array of data and a length, returns the mean
  *
- * @param arr The unsigned array of bytes
+ * @param arr[] The unsigned array of bytes
  * @param arr_size The number of elements in the array
  *
  * @return void - this function outputs to the terminal with printf
  */
-int find_mean(unsigned char arr[], int length);
+unsigned char find_mean(unsigned char arr[], int length);
 
 /**
- * @brief Given an array of data and a length, returns the maximum
+ * @brief Given an array of data and a length, returns the mean
  *
- * @param arr The unsigned array of bytes
+ * @param arr[] The unsigned array of bytes
  * @param arr_size The number of elements in the array
  *
- * @return int - the max
+ * @return unsigned char - the max
  */
-int find_maximum(unsigned char arr[], int length);
+unsigned char find_maximum(unsigned char arr[], int length);
 
 /**
  * @brief Given an array of data and a length, returns the minimum
@@ -80,7 +80,7 @@ int find_maximum(unsigned char arr[], int length);
  *
  * @return int - the min
  */
-int find_minimum(unsigned char arr[], int length);
+unsigned char find_minimum(unsigned char arr[], int length);
 
 /**
  * @brief Given an array of data and a length, sorts the array from largest to smallest. 
@@ -90,7 +90,8 @@ int find_minimum(unsigned char arr[], int length);
  * @param arr The unsigned array of bytes
  * @param arr_size The number of elements in the array
  *
- * @return void - this function returns an int
+ * @return void - this function sorts the array that is passed in by pointer and swaps it round
+ * largest --> smallest
  */
 void sort_array(unsigned char arr[], int length);
 
