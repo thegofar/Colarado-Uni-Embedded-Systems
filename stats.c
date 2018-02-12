@@ -105,13 +105,13 @@ void main() {
     unsigned char tmp;
     unsigned char *a, *b;
     for(int i=0;i<length-1;i++){
-	  for(int j=0;j<length-1; j++){
+      for(int j=0;j<length-1; j++){
         if(arr[j]<arr[j+1]){
-        tmp=arr[j]; //store the smaller value in tmp
-        b=&arr[j+1]; //store larger value address in b
-        a=&arr[j]; // store smaller value address in a
-        *a=*b; // swap b's value into a's value
-        *b=tmp; // assign b's value from a's before we overwrote it!
+          tmp=arr[j]; //store the smaller value in tmp
+          b=&arr[j+1]; //store larger value address in b
+          a=&arr[j]; // store smaller value address in a
+          *a=*b; // swap b's value into a's value
+          *b=tmp; // assign b's value from a's before we overwrote it!
         }
       }
     }
