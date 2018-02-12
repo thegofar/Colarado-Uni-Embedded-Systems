@@ -38,22 +38,22 @@ void main() {
   void print_statistics(unsigned char arr[], int length)
   {
     minimum = find_minimum(arr, length);
-	maximum = find_maximum(arr,length);
-	mean = find_mean(arr,length);
-	median = find_median(arr,length);
+    maximum = find_maximum(arr,length);
+    mean = find_mean(arr,length);
+    median = find_median(arr,length);
 	
-	printf("Minimum: %d\n", minimum);
-	printf("Maximum: %d\n", maximum);
-	printf("Mean: %d\n", mean);
-	printf("Median: %d\n", median);
+    printf("Minimum: %d\n", minimum);
+    printf("Maximum: %d\n", maximum);
+    printf("Mean: %d\n", mean);
+    printf("Median: %d\n", median);
   }
     
   void print_array(unsigned char arr[], int length)
   {
     for(int i=0;i<length;i++)
     {
-	  printf("%d\n" ,arr[i]);
-	}
+      printf("%d\n" ,arr[i]);
+    }
   }
 
   printf("Printing the unsorted array:\n");
@@ -75,9 +75,9 @@ void main() {
     int sum=0;
     for(int i=0;i<length;i++)
     {
-	  sum+=arr[i];
-	}
-	return sum/length;
+      sum+=arr[i];
+    }
+    return sum/length;
   }
 
   unsigned char find_maximum(unsigned char arr[], int length)
@@ -85,7 +85,7 @@ void main() {
     unsigned char tmp=0;
     for(int i =0; i<length; i++)
     {
-        if(arr[i]>tmp){tmp=arr[i];}
+      if(arr[i]>tmp){tmp=arr[i];}
     }
     return tmp;
   }
@@ -95,25 +95,25 @@ void main() {
     unsigned char tmp=255;
     for(int i =0; i<length; i++)
     {
-        if(arr[i]<tmp){tmp=arr[i];}
+      if(arr[i]<tmp){tmp=arr[i];}
     }
     return tmp;
   }
 
   void sort_array(unsigned char arr[], int length)
   { 
-	unsigned char tmp;
-	unsigned char *a, *b;
+    unsigned char tmp;
+    unsigned char *a, *b;
     for(int i=0;i<length-1;i++){
 	  for(int j=0;j<length-1; j++){
-		if(arr[j]<arr[j+1]){
-	      tmp=arr[j]; //store the smaller value in tmp
-		  b=&arr[j+1]; //store larger value address in b
-		  a=&arr[j]; // store smaller value address in a
-		  *a=*b; // swap b's value into a's value
-		  *b=tmp; // assign b's value from a's before we overwrote it!
-	    }
+        if(arr[j]<arr[j+1]){
+        tmp=arr[j]; //store the smaller value in tmp
+        b=&arr[j+1]; //store larger value address in b
+        a=&arr[j]; // store smaller value address in a
+        *a=*b; // swap b's value into a's value
+        *b=tmp; // assign b's value from a's before we overwrote it!
+        }
       }
-	}
+    }
   }
 
